@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React Project</title>
+	<script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+	<div id=root></div>
+	<script type="text/babel">
+		const Hello = ({desc}) => <h1>{desc}</h1>;
+		const App1 = () => (<Hello desc="This is a Component"/>)
+		class App2 extends React.Component {
+			render(){
+				return (<Hello desc="This is a  Component created using JavaScript Class hence called Class Component"/>)
+			}
+		}
+		ReactDOM.render(
+			<div>
+				<App1/>
+				<App2/>
+			</div>,
+			document.getElementById("root")
+			);
+	</script>
+</body>
+</html>
