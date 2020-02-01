@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React Project</title>
+	<script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+	<div id=root></div>
+	<script type="text/babel">
+		let Prop1 = (props) =>{
+			console.log(props)
+			return (
+				<div>
+					<h1>Welcome to {props.library}</h1>
+					<p>{props.message}</p>
+				</div>
+			)
+		};
+		let Prop2 = ({library,message}) =>{
+			console.log(library,message)
+			return (
+				<div>
+					<h1>Welcome to {library}</h1>
+					<p>{message}</p>
+				</div>
+			)
+		};
+		ReactDOM.render(
+			<div>
+				<Prop1 library="React" message="Enjoy Working with Props method#1"/>
+				<Prop2 library="React" message="Enjoy Working with Props Method#2"/>
+			</div>,
+			document.getElementById("root")
+			);
+	</script>
+</body>
+</html>
