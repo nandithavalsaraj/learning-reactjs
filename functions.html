@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React Project</title>
+	<script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+	<div id=root></div>
+	<script type="text/babel">
+		const Func1 = () => <h1>Welcome to World of Functions(Method#1)</h1>
+		const Func2 = () => {
+			return <h1>Welcome to World of Functions(Using curly braces Method)(Method#2)</h1>
+		}
+		const Func3 = () => (<h1>Welcome to World of Functions(Using simple braces)(Method#3)</h1>)
+		ReactDOM.render(
+			<div>
+				<h1>Name of Functions starts with Capital letter</h1>
+				<Func1/>
+				<Func2/>
+				<Func3/>
+			</div>,
+			document.getElementById("root")
+			);
+	</script>
+</body>
+</html>
