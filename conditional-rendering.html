@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React Project</title>
+	<script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+	<div id=root></div>
+	<script type="text/babel">
+		const Hello = ({name}) => <h1>{name}</h1>
+		const App = ({enter}) => (
+		 	<div>
+		 		{enter
+		 			?<Hello name="Enter"/>:
+		 			 <Hello name="Don't Enter"/>
+		 			}
+		 	</div>
+			)
+		ReactDOM.render(
+			<App enter={true}/>,
+			document.getElementById("root")
+			);
+	</script>
+</body>
+</html>
